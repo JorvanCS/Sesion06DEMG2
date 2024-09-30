@@ -39,6 +39,7 @@ import androidx.navigation.NavHostController
 import com.example.sesion06demg2.logicaNegocios.EstudiantesEntidad
 import com.example.sesion06demg2.modeloNav.ItemsBarraInferior
 import com.example.sesion06demg2.navegacion.RutaActualNav
+import com.example.sesion06demg2.views.listaEstudiantes
 
 //definir elementos de la barra inferior
 val menuItems= listOf(ItemsBarraInferior.ItemInicio,
@@ -132,8 +133,8 @@ fun ElementosListadoEstudiantes(estudiante:EstudiantesEntidad,indice:Int){
         cancelaAccion = { verDialogo=false}
     ) {
         //Acepta el usuario
-        //remover al alumno de la lista previa confirmacion
-        //listaAlumnos.removeAt(indice)
+        //remover al estudiantes de la lista previa confirmacion
+        listaEstudiantes.removeAt(indice)
         verDialogo=false
     }
 }
